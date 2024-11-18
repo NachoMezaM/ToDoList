@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 using ToDo.Data;
+using ToDo.Models;
 
 namespace ToDo.Controllers
 {
@@ -24,16 +25,16 @@ namespace ToDo.Controllers
             return View();
         }
 
-        // Handles the HTTP POST request to create a new to-do item
+        // Handles the HTTP POST request to create a new Author item
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Create(ToDo.Models.ToDo todo)
+        public IActionResult Create(Author todo)
         {
             if (ModelState.IsValid)
             {
-                _context.ToDos.Add(todo);
+                _context.Authors.Add(todo);
                 _context.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction(nameof(Index));
             }
 
             return View(todo);
@@ -43,55 +44,42 @@ namespace ToDo.Controllers
 
         #region Details
 
-        // Displays details of a specific to-do item
+        // Displays details of a specific Author item
         public IActionResult Details(int id)
         {
-            if (id == null || _context.ToDos == null)
-            {
-                return RedirectToAction("Index");
-            }
-
-            var toDos = _context.ToDos.FirstOrDefault(x => x.Id == id);
-            if (toDos == null)
+            var author = _context.Authors.FirstOrDefault(x => x.Id == id);
+            if (author == null)
             {
                 return NotFound();
             }
 
-            return View(toDos);
+            return View(author);
         }
 
         #endregion
 
         #region Edit
 
-        // Displays the form to edit a specific to-do item
+        // Displays the form to edit a specific Author item
         public IActionResult Edit(int? id)
         {
-            if (id == null || _context.ToDos == null)
-            {
-                return RedirectToAction("Index");
-            }
-
-            var toDos = _context.ToDos.FirstOrDefault(x => x.Id == id);
-            if (toDos == null)
+            var author = _context.Authors.FirstOrDefault(x => x.Id == id);
+            if (author == null)
             {
                 return NotFound();
             }
-            return View(toDos);
+            return View(author);
         }
 
-        // Handles the HTTP POST request to edit a specific to-do item
+        // Handles the HTTP POST request to edit a specific Author item
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Edit(int? id, ToDo.Models.ToDo toDo)
+        public IActionResult Edit(int? id, ToDo.Models.Author author)
         {
-            if (id != toDo.Id)
-            {
-                return NotFound();
-            }
+
             if (ModelState.IsValid)
             {
-                _context.ToDos.Update(toDo);
+                _context.Authors.Update(author);
                 _context.SaveChanges();
             }
             return RedirectToAction("Index");
@@ -104,18 +92,15 @@ namespace ToDo.Controllers
         // Displays a confirmation page for deleting a specific to-do item
         public IActionResult Delete(int id)
         {
-            if (id == null || _context.ToDos == null)
-            {
-                return RedirectToAction("Index");
-            }
 
-            var toDos = _context.ToDos.FirstOrDefault(x => x.Id == id);
-            if (toDos == null)
+
+            var author = _context.Authors.FirstOrDefault(x => x.Id == id);
+            if (author == null)
             {
                 return NotFound();
             }
 
-            return View(toDos);
+            return View(author);
         }
 
         // Handles the HTTP POST request to delete a specific to-do item
@@ -124,15 +109,11 @@ namespace ToDo.Controllers
         [ActionName("Delete")]
         public IActionResult DeleteConfirm(int id)
         {
-            if (id == null || _context.ToDos == null)
-            {
-                return NotFound();
-            }
 
-            var toDos = _context.ToDos.FirstOrDefault(x => x.Id == id);
-            if (toDos != null)
+            var authors = _context.Authors.FirstOrDefault(x => x.Id == id);
+            if (authors != null)
             {
-                _context.ToDos.Remove(toDos);
+                _context.Authors.Remove(authors);
                 _context.SaveChanges();
             }
 
