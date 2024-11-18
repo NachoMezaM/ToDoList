@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "UHCPr468hUkSYiSBGbY5gVNR100zQdFGFm1E0QtLowqem4+pdG8/dq38L44H1keiujhqhD4bfiJB+WmsmIOa/w==",
+  "dgSpecHash": "kRqGvtwQgrEoaYlJzb2AbShZfY6zeYk2R2JM6Sc/MCH0X2QHH9oFrRfuG6VsDtIabkC6DoF9U1VQH3NdP3rVyg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\nacho\\OneDrive\\Desktop\\DepLearning\\NET DB\\ToDoList-MVC-.NET\\ToDo\\ToDo.csproj",
+  "projectFilePath": "C:\\Users\\nacho\\OneDrive\\Desktop\\ToDoList\\ToDoList\\ToDo\\ToDo.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\nacho\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\nacho\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",

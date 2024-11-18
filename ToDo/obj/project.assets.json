@@ -11908,11 +11908,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\nacho\\OneDrive\\Desktop\\DepLearning\\NET DB\\ToDoList-MVC-.NET\\ToDo\\ToDo.csproj",
+      "projectUniqueName": "C:\\Users\\nacho\\OneDrive\\Desktop\\ToDoList\\ToDoList\\ToDo\\ToDo.csproj",
       "projectName": "ToDo",
-      "projectPath": "C:\\Users\\nacho\\OneDrive\\Desktop\\DepLearning\\NET DB\\ToDoList-MVC-.NET\\ToDo\\ToDo.csproj",
+      "projectPath": "C:\\Users\\nacho\\OneDrive\\Desktop\\ToDoList\\ToDoList\\ToDo\\ToDo.csproj",
       "packagesPath": "C:\\Users\\nacho\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\nacho\\OneDrive\\Desktop\\DepLearning\\NET DB\\ToDoList-MVC-.NET\\ToDo\\obj\\",
+      "outputPath": "C:\\Users\\nacho\\OneDrive\\Desktop\\ToDoList\\ToDoList\\ToDo\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\nacho\\AppData\\Roaming\\NuGet\\NuGet.Config",
