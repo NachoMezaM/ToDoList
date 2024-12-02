@@ -65,23 +65,23 @@ namespace ToDo.Controllers
         // Displays the form to edit a specific Author item
         public IActionResult Edit(int? id)
         {
-            var author = _context.Authors.FirstOrDefault(x => x.Id == id);
-            if (author == null)
+            var cliente = _context.Clientes.FirstOrDefault(x => x.Id == id);
+            if (cliente == null)
             {
                 return NotFound();
             }
-            return View(author);
+            return View(cliente);
         }
 
         // Handles the HTTP POST request to edit a specific Author item
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Edit(int? id, ToDo.Models.Author author)
+        public IActionResult Edit(int? id, ToDo.Models.Cliente cliente)
         {
 
             if (ModelState.IsValid)
             {
-                _context.Authors.Update(author);
+                _context.Clientes.Update(cliente);
                 _context.SaveChanges();
             }
             return RedirectToAction("Index");
@@ -96,13 +96,13 @@ namespace ToDo.Controllers
         {
 
 
-            var author = _context.Authors.FirstOrDefault(x => x.Id == id);
-            if (author == null)
+            var cliente = _context.Clientes.FirstOrDefault(x => x.Id == id);
+            if (cliente == null)
             {
                 return NotFound();
             }
 
-            return View(author);
+            return View(cliente);
         }
 
         // Handles the HTTP POST request to delete a specific to-do item
@@ -112,10 +112,10 @@ namespace ToDo.Controllers
         public IActionResult DeleteConfirm(int id)
         {
 
-            var authors = _context.Authors.FirstOrDefault(x => x.Id == id);
-            if (authors != null)
+            var clientes = _context.Clientes.FirstOrDefault(x => x.Id == id);
+            if (clientes != null)
             {
-                _context.Authors.Remove(authors);
+                _context.Clientes.Remove(clientes);
                 _context.SaveChanges();
             }
 
