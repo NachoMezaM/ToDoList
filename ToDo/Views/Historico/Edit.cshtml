@@ -1,0 +1,37 @@
+@model Historico
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+
+<form method="post">
+    <div asp-validation-summary="All" class="text-danger"></div>
+    <div class="form-group">
+        <label asp-for="Id"></label>
+        <input asp-for="Id" class="form-control" readonly/>
+        <span asp-validation-for="Id" class="text-danger"></span>
+    </div>
+    
+    <div class="form-group">
+        <label asp-for="ClienteId"></label>
+        <input asp-for="ClienteId" class="form-control" />
+        <span asp-validation-for="ClienteId" class="text-danger"></span>
+    </div>
+    
+    <div class="form-group">
+        <label asp-for="ProductCode"></label>
+        <input asp-for="ProductCode" class="form-control" />
+        <span asp-validation-for="ProductCode" class="text-danger"></span>
+    </div> 
+
+     <div class="form-group">
+        <label asp-for="ProductPrice"></label>
+        <input asp-for="ProductPrice" class="form-control" />
+        <span asp-validation-for="ProductPrice" class="text-danger"></span>
+    </div> 
+    <div>
+        <button type="submit" class="btn btn-primary">Update</button> |
+        <a asp-action="Index" class="btn btn-info ">Back to List</a>
+    </div>
+</form>
