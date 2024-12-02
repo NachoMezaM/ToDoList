@@ -15,6 +15,9 @@ namespace ToDo.Data
         public DbSet<Author> Authors {get; set;}
         public DbSet<Book> Books {get; set;}
 
+        public DbSet<Cliente> Clientes { get; set; }
+        public DbSet<Producto> Productos { get; set; }
+        public DbSet<Historico> Historicos { get; set; }
 
     }
 }
